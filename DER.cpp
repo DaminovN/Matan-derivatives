@@ -33,9 +33,10 @@ int Number_Operation( string MyString )
 }
 bool Number( string MyString )
 {
+	if( MyString=="e" )return 1;
 	for( int i=0;i<MyString.size();i++ )
 	{
-		if( !isdigit(MyString[i]) )return false;
+		if( !isdigit(MyString[i]) && MyString[i]!='.' )return false;
 	}
 	return true;
 }
@@ -562,3 +563,4 @@ main()
 		cout<<endl;
 	}
 }
+//
